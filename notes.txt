@@ -13,3 +13,6 @@ I'd like to learn to do some basic input and output, maybe throw together a litt
 
 I am following along with some of the tutorials on this website because they're seemingly pretty straightforward and decent at explaining the basics without freaking me out: https://www.guru99.com/c-programming-tutorial.html
 
+Learning string comparisons: very different from python. 'strcmp' lets me compare two strings for matching contents and returns '0' if things match. No more [ if x == y ] for everything under the sun, probably a good thing to get used to...
+
+
