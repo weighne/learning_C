@@ -1,0 +1,15 @@
+# Learning C
+## Introduction / Background
+
+I'm going to try my best to document my 'journey' learning C.
+
+I've tossed the idea around for a while, figured there was no time better than now. So, this is Day 1. I've got very little knowledge of programming outside of some limited python knowledge. Hopefully this goes well!
+
+## Day 1
+
+My environment is set up on my work and home computers and tested with the usual 'hello world,' everything seems to be working!
+
+I'd like to learn to do some basic input and output, maybe throw together a little hangman game or something like that... we'll see.
+
+ 
+
