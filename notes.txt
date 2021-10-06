@@ -15,4 +15,4 @@ I am following along with some of the tutorials on this website because they're 
 
 Learning string comparisons: very different from python. 'strcmp' lets me compare two strings for matching contents and returns '0' if things match. No more [ if x == y ] for everything under the sun, probably a good thing to get used to...
 
-
+Our very first segmentation fault! No idea what exactly is causing it! 'strcmp' doesn't seem to be working exactly right at the moment, so I copypasta'd some stackoverflow code which said it was a copy of 'strcmp' and now we get a segmentation fault when entering a string for comparison. Very cool!
