@@ -23,3 +23,4 @@ Learning about arrays today for the rest of this hangman game. Need to learning 
 
 Learning more about string comparison and iteration, nowhere near as simple as python, but interesting seeing how arrays are handled and what built-in functions exist for comparisons. 
 
+Very tired today T.T
