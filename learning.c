@@ -12,6 +12,20 @@ int compstr(char *a, char *b) {
     return 0;
 }
 
+int check_for_char_match(char input, char word[]) {
+//    for (int y = 0; y < strlen(word); y++) {
+//        if (strchr(word, input) != NULL) {
+//            blank[strchr(word, input)+1] = input;
+//        } else {
+//            continue;
+//        }
+//    }
+    char check = strcmp(word, input);
+    printf("%c", check);
+
+    return 0;
+}
+
 int main() {
 //    for (int i=0; i<10; i++) {
 //        printf("%d\n",i);
@@ -19,6 +33,7 @@ int main() {
 
     char word[] = "Sandwich"; // word variable
     int length = strlen(word);  // get word length
+    char blank[length];
     char word2[25];
 
     printf("%s\n", word);
