@@ -1,65 +1,74 @@
 #include<stdio.h>
 #include<string.h>
+#include <ctype.h>
 
-int compstr(char *a, char *b) {
-    int i = 0;
-    while(a[i] != '\0' && b[i] != '\0') {
-        if(a[i] != b[i]) {
-            return 1;
-        }
-        i++;
-    }
-    return 0;
+// int compstr(char *a, char *b) {
+//     int i = 0;
+//     while(a[i] != '\0' && b[i] != '\0') {
+//         if(a[i] != b[i]) {
+//             return 1;
+//         }
+//         i++;
+//     }
+//     return 0;
+// }
+
+int find_char(char *str, int c){
+  char * index = strchr(str, c);
+
+  if(index != NULL){
+    // pos = index IF index - str is true OTHERWISE (:) index = -1
+    int pos = index ? index - str : -1;
+    printf("%d\n", pos);
+    return pos;
+  } else {
+    return -1;
+  }
 }
 
-int check_for_char_match(char input, char word[]) {
-//    for (int y = 0; y < strlen(word); y++) {
-//        if (strchr(word, input) != NULL) {
-//            blank[strchr(word, input)+1] = input;
-//        } else {
-//            continue;
-//        }
-//    }
-    char check = strcmp(word, input);
-    printf("%c", check);
-
-    return 0;
-}
+// int check_for_char_match(char input, char word[]) {
+//     char check = strcmp(word, input);
+//     printf("%c", check);
+//
+//     return 0;
+// }
 
 int main() {
-//    for (int i=0; i<10; i++) {
-//        printf("%d\n",i);
-//    }
-
-    char word[] = "Sandwich"; // word variable
+    char word[] = "SANDWICH"; // word variable
     int length = strlen(word);  // get word length
     char blank[length];
-    char word2[25];
 
-    printf("%s\n", word);
-    printf("%d\n", length);
-
-    fgets(word2, 25, stdin);
-    int x = 0;
-    for (int y = 0; y < length; y++) {
-        if (word[y] == word2[y] ) {
-            x++;
-        } else {
-            continue;
-        }
+    for(int x=0;x<=length;x++){
+      blank[x] = "_";
     }
-
-    if (compstr(word,word2) == 0) {  // strcmp returns 0 if strings match
-        printf("It matches!\n");
-    } else {
-        printf("It does not matches!\n");
+    while (0 == 0) {
+      printf("Hangman");
+      for(int i=0; i <= length; i++){
+        printf("%c ", blank[i]);
+      }
+      char word2[1];
+      fgets(word2, 1, stdin);
+      int index = find_char(word, toupper(word2[0]));
+      blank[index] = word[index];
     }
+    // int x = 0;
+    // for (int y = 0; y < length; y++) {
+    //     if (word[y] == toupper(word2[y]) ) {
+    //         x++;
+    //     } else {
+    //         continue;
+    //     }
+    // }
 
-//    for (int i = 0; i < length; i++) {  // iterate through word and print characters
-//        printf("%c\n",word[i]);
-//    }
-//    fgets(word, 25, stdin);  // get user input, ignore spaces and such
-//    printf("Your name is: %s", word);
-    printf("There are %d matching letters!\n", x);
+    // if (compstr(word,word2) == 0) {  // strcmp returns 0 if strings match
+    //     printf("It matches!\n");
+    // } else {
+    //     printf("It does not matches!\n");
+    // }
+    // char *index = strchr(word, str[0]);
+    // int pos = index ? index - word : -1;
+    // find_char(word, toupper(str[0]));
+    // printf("There are %d matching letters!\n", x);
+    // printf("%d\n", pos);
     return 0;
 }

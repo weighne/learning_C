@@ -21,6 +21,24 @@ Our very first segmentation fault! No idea what exactly is causing it! 'strcmp' 
 
 Learning about arrays today for the rest of this hangman game. Need to learning how to build an array of nothing and fill it with user input, THEN compare it to the string of the hangman word...
 
-Learning more about string comparison and iteration, nowhere near as simple as python, but interesting seeing how arrays are handled and what built-in functions exist for comparisons. 
+Learning more about string comparison and iteration, nowhere near as simple as python, but interesting seeing how arrays are handled and what built-in functions exist for comparisons.
 
 Very tired today T.T
+
+## Day 3!
+
+Stole some very complex pointer arithmetic from stackoverflow and it only broke my brain for a few minutes before finings this: https://www.tutorialspoint.com/cprogramming/c_operators.htm
+
+The code I stole:
+
+char * index = strchr(str, c);
+int pos = index ? index - str : -1;
+
+That second line specifically is still kind of hard to wrap my brain around.
+
+'int pos' defines the variable
+it's being set equal to 'index - str' IF 'index' is true, otherwise it is being set equal to -1
+
+@_@
+
+I need to get a better understanding of arrays... Trying to dynamically fill with "blanks" an array that matches the length of the word.
